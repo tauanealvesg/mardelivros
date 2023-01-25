@@ -1,0 +1,117 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.all{
+  font-family: N;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #168Af2;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  
+.elements {
+  max-width: 75vw;
+}
+.elements .carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.elements .carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.elements .carousel .item {
+  background-color: #DEEEFF;
+  margin: 10px;
+  padding: 10px;
+  width: 280px;
+  border-radius: 16px;
+  flex: none;
+}
+
+
+
+
+.elements .carousel .item .imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.elements .carousel .item .info {
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.item .nome{
+  color: #168Af2;
+}
+
+.item .imagem{
+  color: #168Af2;
+}
+.item .autor{
+  color: #168Af2;
+}
+
+.item .preco{
+  color: #ffffff;
+}
+
+
+.elements .carousel .item .info span {
+  display: block;
+  text-align: center;
+  padding: 5px;
+}
+
+.elements .carousel .item .info .nome {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #168Af2;
+}
+
+
+.elements .carousel .item .info .preco {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 100px;
+  background-color: #168Af2;
+}
+
+
+
+.elements .buttons {
+  width: 100%;
+  text-align: center;
+}
+.elements .buttons button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.right{
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.left{
+  font-size: 25px;
+  color: #ffffff;
+}
