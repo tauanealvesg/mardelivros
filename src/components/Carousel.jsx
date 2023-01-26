@@ -6,9 +6,6 @@ import styles from './Carousel.css';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/AI";
 
 
-
-
-
 const Carousel = () => {
   const [livros, setLivros] = useState([]);
 
@@ -16,16 +13,21 @@ const Carousel = () => {
 
     try {
 
-      const response = await axios.get("https://api-livro.onrender.com/livros");
-
-      
-
+      const response = await axios.get(`https://livrariacoisaetau.onrender.com/Livros`);
       const data = response.data;
 
-      setLivros(data);
+      const filterLivros = data.filter(livros => {
+        return (livros.genero === 'fantasia' )
+      })
 
+      console.log(filterLivros)
+
+
+
+
+
+      setLivros(filterLivros);
       console.log(data);
-      
     } catch (error) {
       console.log(error);
     }
@@ -76,6 +78,7 @@ const Carousel = () => {
           );
         })}
       </div>
+      
 
       <div className="buttons">
         <button className='left' onClick={handleLeftClick}><AiOutlineArrowLeft /></button>
